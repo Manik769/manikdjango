@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update/{{userData.id}}" method="post">
+    {% csrf_token %}
+    Product ID:<input type="text" name="cid" value="{{userData.cid}}"><br>
+    Product Name:<input type="text" name="cname" value="{{userData.cname}}"><br>
+    Product Quanity:<input type="text" name="cqty" value="{{userData.cqty}}"><br>
+    Product Price:<input type="text" name="cprice" value="{{userData.cprice}}"><br>
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>

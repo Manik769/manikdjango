@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Information about products</h1>
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Quanity</th>
+            <th>Product Price</th>
+        </tr>
+    </thead>
+      <tbody>
+      {% for user in userData %}
+        <tr class="a2">
+            <td class="a8">{{user.cid}}</td>
+            <td class="a9">{{user.cname}}</td>
+            <td class="a10">{{user.cqty}}</td>
+            <td class="a11">{{user.cprice}}</td>
+            <td>
+                <a  href="/edit/{{user.id}}">Edit</a>
+                <a href="/delete/{{user.id}}">Delete</a>
+            </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+</table>
+{% endblock content %}
+</body>
+</html>
